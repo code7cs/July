@@ -8,28 +8,28 @@
 
 2. css selectors:
 
-.class
+`.class`
 
-> #id
+ `#id`
 
-div ~ p
+`div ~ p`
 
-div p
+`div p`
 
-div > p
+`div > p`
 
-div + p
+`div + p`
 
-[target]
+`[target]`
 
-p:first-child
+`p:first-child`
 
-p::first-letter
+`p::first-letter`
 
-p::first-line
+`p::first-line`
 
-p::first-of-type
+`p::first-of-type`
 
-input:readonly
+`input:readonly`
 
-input:required
+`input:required`
