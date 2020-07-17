@@ -1,0 +1,42 @@
+<!--
+ * @Author: Hanfan Wang
+ * @Date: 2020-07-16 16:15:46
+ * @LastEditTime: 2020-07-16 16:23:45
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let animal = {
+            eats: true,
+            walk() {
+                console.log("Animal Walk")
+            }
+        }
+        let rabbit = {
+            jump: true,
+            __proto__: animal
+        }
+        let longEar = {
+            earLength: 10,
+            __proto__: rabbit,
+            walk() {
+                console.log("longEar Walk");
+                return null;
+            }
+        }
+
+        longEar.walk();
+        console.log(longEar.jump);
+    </script>
+</body>
+
+</html>
