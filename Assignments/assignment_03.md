@@ -82,7 +82,7 @@
 Our objective: get the total score of force users only
 (map, reduce, filter)
 
-Answer: see `totalScore.js` file
+Answer: see `Day05/totalScore.js` file
 
 3. display all employee names from the json data
-Answer: see `totalScore.js` file
+Answer: see `Day05/totalScore.js` file
