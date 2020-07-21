@@ -1,29 +1,70 @@
 /*
  * @Author: Hanfan Wang
  * @Date: 2020-07-20 16:01:05
- * @LastEditTime: 2020-07-20 16:17:43
+ * @LastEditTime: 2020-07-21 13:53:04
  */
 
+// /*
+//  * @Author: Hanfan Wang
+//  * @Date: 2020-07-20 16:01:05
+//  * @LastEditTime: 2020-07-21 13:48:49
+//  */
+
+// const path = require("path");
+
+// module.exports = {
+//   entry: {
+//     app: "./src/app.js",
+//   },
+//   output: {
+//     path: path.resolve(__dirname, "build"),
+//     publicPath: "/",
+//     filename: "app.bundle.js",
+//   },
+//   module: {
+//     rules: [
+//       {
+//         test: /\.(js)$/,
+//         exclude: /node_modules/,
+//         use: ["babel-loader"],
+//         // loader: "babel-loader",
+//         // query: {
+//         //   presets: ["env"],
+//         // },
+//       },
+//     ],
+//   },
+//   resolve: {
+//     extensions: ["*", ".js"],
+//   },
+// };
 const path = require("path");
 
 module.exports = {
-  entry: {
-    app: "./src/app.js",
-  },
-  output: {
-    path: path.resolve(__dirname, "build"),
-    filename: "app.bundle.js",
-  },
+  entry: "./src/app.js",
+  devtool: "inline-source-map",
   module: {
     rules: [
       {
-        test: /\.js?$/,
+        test: /\.(js)$/,
         exclude: /node_modules/,
-        loader: "babel-loader",
-        query: {
-          presets: ["env"],
-        },
+        use: ["babel-loader"],
+        // loader: 'babel-loader',
+        // options: {
+        //     presets: ['@babel/preset-env'] // <-- here
+        // }
       },
     ],
+  },
+  resolve: {
+    extensions: ["*", ".js"],
+  },
+  output: {
+    path: __dirname + "/build",
+    publicPath: "/",
+    filename: "app.bundle.js",
+  },
+  devServer: {
+    contentBase: "./build",
   },
 };
