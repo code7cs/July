@@ -1,0 +1,26 @@
+<!--
+ * @Author: Hanfan Wang
+ * @Date: 2020-07-21 15:01:22
+ * @LastEditTime: 2020-07-21 15:38:52
+-->
+<!DOCTYPE html>
+<html ng-app="myModule">
+
+<head>
+    <title>Document</title>
+    <script src="angular.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div ng-controller="myController1">
+        {{ message }}
+    </div>
+    <div ng-controller="myController2">
+        <div>firstName: {{ emp.firstName }}</div>
+        <div>lastname: {{ emp.lastName }}</div>
+        <div>city: {{ emp.city }}</div>
+    </div>
+</body>
+
+</html>

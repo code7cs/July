@@ -1,7 +1,7 @@
 /*
  * @Author: Hanfan Wang
  * @Date: 2020-07-20 16:01:05
- * @LastEditTime: 2020-07-21 13:53:04
+ * @LastEditTime: 2020-07-21 14:01:16
  */
 
 // /*
@@ -48,11 +48,11 @@ module.exports = {
       {
         test: /\.(js)$/,
         exclude: /node_modules/,
-        use: ["babel-loader"],
-        // loader: 'babel-loader',
-        // options: {
-        //     presets: ['@babel/preset-env'] // <-- here
-        // }
+        // use: ["babel-loader"],
+        loader: "babel-loader",
+        options: {
+          presets: ["@babel/preset-env"], // <-- here
+        },
       },
     ],
   },
