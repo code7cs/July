@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Form</title>
+    <link rel="stylesheet" href="form.css">
+    <script src="angular.js"></script>
+    <script src="form.js"></script>
+
+</head>
+<body ng-app="app">
+<div ng-controller="myController" class="container">
+    <div class="container__title">
+        <h1>Services</h1>
+    </div>
+    <div class="container__content">
+        <table>
+            <tr
+                    ng-repeat="service in services"
+                    class="container__content-row"
+                    ng-click="changeColor(service)"
+                    ng-class="{isSelected: service.isSelected === true}"
+            >
+                <td>{{ service.name }}</td>
+                <td>{{ service.price | currency: "$"}}</td>
+            </tr>
+            <tr class="container__content-total">
+                <td>Total: </td>
+                <td>{{ totalPrice | currency: "$" }}</td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+</body>
+</html>
