@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Instant Search</title>
+    <link rel="stylesheet" href="search.css">
+    <script src="angular.js"></script>
+    <script src="search.js"></script>
+</head>
+<body ng-app="app">
+    <div ng-controller="myController">
+        <div class="container">
+
+            <div class="container__header">
+                <label>
+                    <input type="text" placeholder="Enter your search terms" ng-model="searchWord">
+                </label>
+            </div>
+
+            <div class="container__list">
+                <ul ng-repeat="item in items">
+                    <li><img ng-src="{{ item.img }}" alt="" width="50" height="50"></li>
+                    <li>{{ item.describe }}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
