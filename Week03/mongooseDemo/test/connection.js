@@ -1,7 +1,7 @@
 /*
  * @Author: Hanfan Wang
  * @Date: 2020-07-28 10:44:28
- * @LastEditTime: 2020-07-28 11:24:02
+ * @LastEditTime: 2020-07-28 19:37:52
  */
 const mongoose = require("mongoose");
 
@@ -23,9 +23,9 @@ before(function (done) {
 });
 
 // Drop the characters collections before each test
-beforeEach(function (done) {
-  // Drop the collection
-  mongoose.connection.collections.mariochars.drop(function () {
-    done();
-  });
-});
+// beforeEach(function (done) {
+//   // Drop the collection
+//   mongoose.connection.collections.mariochars.drop(function () {
+//     done();
+//   });
+// });
