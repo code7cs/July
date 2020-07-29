@@ -1,7 +1,7 @@
 /*
  * @Author: Hanfan Wang
  * @Date: 2020-07-29 11:08:16
- * @LastEditTime: 2020-07-29 12:36:30
+ * @LastEditTime: 2020-07-29 18:17:32
  */
 function AppCtrl($scope, $http) {
   console.log("Hello world from controller");
@@ -41,5 +41,9 @@ function AppCtrl($scope, $http) {
       .success(function (response) {
         refresh();
       });
+  };
+
+  $scope.clear = function () {
+    $scope.contact = "";
   };
 }

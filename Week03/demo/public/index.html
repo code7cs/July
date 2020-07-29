@@ -1,7 +1,7 @@
 <!--
  * @Author: Hanfan Wang
  * @Date: 2020-07-29 10:48:58
- * @LastEditTime: 2020-07-29 12:22:45
+ * @LastEditTime: 2020-07-29 18:07:44
 -->
 <!DOCTYPE html>
 <html ng-app>
@@ -33,6 +33,7 @@
                     <td><input type="text" class="form-control" ng-model="contact.number"></td>
                     <td><button class="btn btn-primary" ng-click="addContact()">Add Contact</button></td>
                     <td><button class="btn btn-info" ng-click="update()">Update</button></td>
+                    <td><button class="btn btn-block" ng-click="clear()">Clear</button></td>
 
                 </tr>
                 <tr ng-repeat="contact in contactlist">
