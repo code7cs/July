@@ -1,11 +1,13 @@
 /*
  * @Author: Hanfan Wang
  * @Date: 2020-07-31 10:38:25
- * @LastEditTime: 2020-07-31 11:53:27
+ * @LastEditTime: 2020-07-31 12:02:22
  */
 const express = require("express");
 const todoRoutes = require("./routes/todo.routes");
 const app = express();
+
+app.use(express.json());
 
 app.use("/todos", todoRoutes);
 
