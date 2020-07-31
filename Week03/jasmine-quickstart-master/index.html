@@ -1,3 +1,8 @@
+<!--
+ * @Author: Hanfan Wang
+ * @Date: 2019-08-15 07:31:34
+ * @LastEditTime: 2020-07-30 22:30:34
+-->
 <html>
 
 <head>
@@ -12,6 +17,25 @@
         function getOpposite(bool) {
             return !bool;
         }
+
+        function add(x, y) {
+            return x + y;
+        }
+
+        describe('Math Function', () => {
+            xit("Gets the Sum of 2 Numbers", () => {
+                // arrange
+                const num1 = 2;
+                const num2 = 3;
+
+                // act
+                const result = add(num1, num2);
+
+                // arrange
+                // expect(result).toBe(5);
+                expect(result).toBeGreaterThan(5);
+            })
+        })
 
         describe('Write Your Test Group Descriptions Here', () => {
             it('Write Your Test Expectation Here', () => {
