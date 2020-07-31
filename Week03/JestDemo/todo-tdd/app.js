@@ -1,10 +1,13 @@
 /*
  * @Author: Hanfan Wang
  * @Date: 2020-07-31 10:38:25
- * @LastEditTime: 2020-07-31 10:42:45
+ * @LastEditTime: 2020-07-31 11:53:27
  */
 const express = require("express");
+const todoRoutes = require("./routes/todo.routes");
 const app = express();
+
+app.use("/todos", todoRoutes);
 
 app.get("/", (req, res) => {
   res.json("Hello World!!");
@@ -13,3 +16,5 @@ app.get("/", (req, res) => {
 app.listen(3000, () => {
   console.log("Server is running on PORT 3000");
 });
+
+module.exports = app;
