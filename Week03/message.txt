@@ -1,0 +1,150 @@
+use test
+
+show dbs
+
+show databases
+
+//on the fly
+db.students.insert({_id:3, name:"Jim"})
+
+//current database
+db
+
+db.students.find()
+//createCollection
+db.createCollection("producers")
+
+//drop db
+db.dropDatabase()
+
+//drop collection
+db.producers.drop()
+
+//show all collections
+show collections
+
+
+//insert many docs
+
+db.students.insert([
+    {
+        "StudentNo.":"1",
+        "FirstName":"Mark",
+        "LastName":"Waugh",
+        "Age":"10"
+    }])
+     {
+        "StudentNo.":"2",
+        "FirstName":"Mel",
+        "LastName":"Gibson",
+        "Age":"17"
+    },
+     {
+        "StudentNo.":"3",
+        "FirstName":"Deno",
+        "LastName":"Smith",
+        "Age":"40"
+    },
+     {
+        "StudentNo.":"4",
+        "FirstName":"Charls",
+        "LastName":"Trippy",
+        "Age":"112"
+    },
+     {
+        "StudentNo.":"5",
+        "FirstName":"Shay",
+        "LastName":"Waugh",
+        "Age":"15"
+    },
+     {
+        "StudentNo.":"6",
+        "FirstName":"Kate",
+        "LastName":"Burrow",
+        "Age":"13"
+    },
+     {
+        "StudentNo.":"7",
+        "FirstName":"July",
+        "LastName":"Waugh",
+        "Age":"16"
+    },
+     {
+        "StudentNo.":"8",
+        "FirstName":"Denny",
+        "LastName":"Waugh",
+        "Age":"16"
+    }
+])
+    
+db.students.find()
+db.students.findOne()
+
+db.students.find(
+    {
+      "Age":{$gt:"15"}
+    }
+)
+    
+db.students.find(
+    {
+      "Age":{$gte:"15"}
+    }
+)
+    
+db.students.find(
+    {
+      "Age":{$ne:"15"}
+    }
+)
+
+
+db.students.find(
+    {
+      "FirstName":"Mark", "Age":"10"
+    }
+)
+    
+    
+db.students.find(
+    {
+      $or : [{"FirstName":"Mark"}, {"Age":"16"}]
+    }
+)
+    
+db.students.find(
+    {
+      "FirstName":"Mark" , $or: [{"Age":"1"}, {"Age":"16"}]
+    }
+)
+    
+    
+    db.students.update(
+        {"LastName":"Waugh"},
+        {$set : {"FirstName":"Mark"}},
+        {multi:true}
+    )
+
+db.students.save(
+        
+        {"_id" : ObjectId("5f1eff179bb8aa0ebedb59d7"), "StudentNo":"11", "FirstName":"newFName", "LastName":"newLName", "Age":"101"}
+        
+)
+        
+        
+        
+db.students.remove(
+        {
+            "Age" : "16"
+ 
+        },1 )
+        
+ db.students.find(
+   {}, {"LastName":1, "FirstName":1, "_id":0}     
+ ).skip(3).limit(3)
+
+
+
+ db.students.find(
+   {}, {"LastName":1, "FirstName":1, "_id":0}     
+ ).sort({"FirstName":-1})
