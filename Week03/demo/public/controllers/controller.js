@@ -1,7 +1,7 @@
 /*
  * @Author: Hanfan Wang
  * @Date: 2020-07-29 11:08:16
- * @LastEditTime: 2020-07-29 18:17:32
+ * @LastEditTime: 2020-08-02 17:34:11
  */
 function AppCtrl($scope, $http) {
   console.log("Hello world from controller");
