@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+
+<head>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+
+<body>
+
+    <script>
+        // d3.csv("employee.csv")
+        //     .then(function (data) {
+        //         console.log(typeof data)
+        //         for (var i = 0; i < data.length; i++) {
+        //             console.log(data[i].Name);
+        //             console.log(data[i].Age);
+        //         }
+        //     });
+        // d3.xml("employee.xml")
+        //     .then(function (data) {
+        //         console.log(data)
+        //     })
+        d3.json("employee.json").then(function (data) {
+            d3.select("body").selectAll("p").data(data).enter().append("p").text(function (d) {
+                return d.name + " , " + d.location;
+            })
+        })
+    </script>
+</body>
+
+</html>
