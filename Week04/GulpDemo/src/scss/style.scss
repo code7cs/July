@@ -4,3 +4,7 @@ body {
     background: $bg;
     color: $red;
 }
+
+a {
+    -webkit-transition: all 320ms ease;
+}
