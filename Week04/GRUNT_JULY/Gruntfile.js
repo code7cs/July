@@ -1,7 +1,7 @@
 /*
  * @Author: Hanfan Wang
  * @Date: 2020-08-06 09:58:28
- * @LastEditTime: 2020-08-06 10:36:01
+ * @LastEditTime: 2020-08-06 10:44:38
  */
 
 var sass = require("node-sass");
@@ -33,11 +33,22 @@ module.exports = function (grunt) {
         ],
       },
     },
+    uglify: {
+      build: {
+        files: [
+          {
+            src: "build/scripts.js",
+            dest: "build/scripts.min.js",
+          },
+        ],
+      },
+    },
   });
 
   // Load the plugins
   grunt.loadNpmTasks("grunt-contrib-concat");
   grunt.loadNpmTasks("grunt-sass");
+  grunt.loadNpmTasks("grunt-contrib-uglify");
 
   // Register the tasks
   grunt.registerTask("concat-js", ["concat:js"]);
