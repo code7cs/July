@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JSHint Report</title>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container-fluid">
+    <table class="table table-hover">
+        <tr>
+            <th class="text-center">Code</th>
+            <th class="text-center">Line</th>
+            <th class="text-center">Column</th>
+            <th>Evidence</th>
+            <th>Reason</th>
+        </tr>
+        <tr><td colspan="5"><b>src/main.js</b></td></tr><tr class="warning">
+    <td class="text-center">W061</td>
+    <td class="text-center">28</td>
+    <td class="text-center">11</td>
+    <td><code>  var a = eval(&quot;x * y&quot;) + &quot;&lt;br&gt;&quot;;</code></td>
+    <td>eval can be harmful.</td>
+</tr><tr class="warning">
+    <td class="text-center">W061</td>
+    <td class="text-center">29</td>
+    <td class="text-center">11</td>
+    <td><code>  var b = eval(&quot;2 + 2&quot;) + &quot;&lt;br&gt;&quot;;</code></td>
+    <td>eval can be harmful.</td>
+</tr><tr class="warning">
+    <td class="text-center">W061</td>
+    <td class="text-center">30</td>
+    <td class="text-center">11</td>
+    <td><code>  var c = eval(&quot;x + 17&quot;) + &quot;&lt;br&gt;&quot;;</code></td>
+    <td>eval can be harmful.</td>
+</tr><tr class="warning">
+    <td class="text-center">W018</td>
+    <td class="text-center">41</td>
+    <td class="text-center">12</td>
+    <td><code>    return !(n &gt; 1) ? 1 : arguments.callee(n - 1) * n;</code></td>
+    <td>Confusing use of &#039;!&#039;.</td>
+</tr><tr class="warning">
+    <td class="text-center">W004</td>
+    <td class="text-center">48</td>
+    <td class="text-center">7</td>
+    <td><code>  var x = 13;</code></td>
+    <td>&#039;x&#039; is already defined.</td>
+</tr>
+    </table>
+    <div class="well">
+    Found <span class="label label-default">5</span> failures - <span class="label label-danger">0 errors</span> &amp; <span class="label label-warning">5 warnings</span>
+</div>
+</div>
+
+</body>
+</html>
