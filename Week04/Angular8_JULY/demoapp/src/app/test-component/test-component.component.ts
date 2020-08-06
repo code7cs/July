@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-test-component',
-  templateUrl: './test-component.component.html',
-  styleUrls: ['./test-component.component.css']
+  selector: "app-test-component",
+  templateUrl: "./test-component.component.html",
+  styleUrls: ["./test-component.component.css"],
 })
 export class TestComponentComponent implements OnInit {
+  public name = "Hanfan Wang";
+  public myId = "testid";
 
-  constructor() { }
+  public isDisables = true;
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
