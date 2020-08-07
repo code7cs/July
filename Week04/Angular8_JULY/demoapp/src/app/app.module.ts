@@ -9,6 +9,8 @@ import { EventBindingComponent } from "./event-binding/event-binding.component";
 import { FormsModule } from "@angular/forms";
 import { ComponentInteracctionComponent } from './component-interacction/component-interacction.component';
 import { CustomHerosPipePipe } from './custom-heros-pipe.pipe';
+import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { CustomHerosPipePipe } from './custom-heros-pipe.pipe';
     EventBindingComponent,
     ComponentInteracctionComponent,
     CustomHerosPipePipe,
+    EmployeeListComponent,
+    EmployeeDetailComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
