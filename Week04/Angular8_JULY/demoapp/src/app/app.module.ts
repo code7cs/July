@@ -11,6 +11,7 @@ import { ComponentInteracctionComponent } from './component-interacction/compone
 import { CustomHerosPipePipe } from './custom-heros-pipe.pipe';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { EmployeeDetailComponent } from './employee-detail/employee-detail.compo
     EmployeeListComponent,
     EmployeeDetailComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
