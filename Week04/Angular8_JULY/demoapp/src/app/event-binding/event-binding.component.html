@@ -23,11 +23,15 @@
 </ng-template>
 
 <!-- Switch -->
-
 <div [ngSwitch]="color">
   <div *ngSwitchCase="'red'">You picked red color</div>
   <div *ngSwitchCase="'blue'">You picked blue color</div>
   <div *ngSwitchCase="'green'">You picked green color</div>
   <div *ngSwitchCase="'orange'">You picked orange color</div>
   <div *ngSwitchDefault>Pick Again</div>
+</div>
+
+<!-- ngFor -->
+<div *ngFor="let color of colors; index as i; first as f; last as l;even as e; odd as o">
+  <h2>{{e}} {{ o }} {{ i }} {{ f }} {{ l }} {{ color }}</h2>
 </div>

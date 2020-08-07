@@ -20,4 +20,5 @@ export class EventBindingComponent implements OnInit {
 
   displayName = true;
   color = "blue";
+  colors = ['red','blue','green'];
 }
