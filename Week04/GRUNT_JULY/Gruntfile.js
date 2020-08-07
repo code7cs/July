@@ -56,6 +56,23 @@ module.exports = function (grunt) {
         ],
       },
     },
+    jshint: {
+      options: {
+        curly: true,
+        eqeqeq: true,
+        eqnull: true,
+        browser: true,
+        globals: {
+          jQuery: true,
+        },
+      },
+      files: ["js/*.js"],
+      options: {
+        globals: {
+          jQuery: true,
+        },
+      },
+    },
   });
 
   // Load the plugins
@@ -63,6 +80,8 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks("grunt-sass");
   grunt.loadNpmTasks("grunt-contrib-uglify");
   grunt.loadNpmTasks("grunt-contrib-cssmin");
+
+  grunt.loadNpmTasks("grunt-contrib-jshint");
 
   // Register the tasks
   grunt.registerTask("concat-js", ["concat:js"]);
