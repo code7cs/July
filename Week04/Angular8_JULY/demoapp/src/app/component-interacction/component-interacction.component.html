@@ -28,6 +28,6 @@
 <!-- custom pipe -->
 <select>
   <option *ngFor="let hero of superHeros" [value]="hero.Id">
-    {{ hero.Name}}
+    {{ hero.Name | customHerosPipe: hero.Id }}
   </option>
 </select>
