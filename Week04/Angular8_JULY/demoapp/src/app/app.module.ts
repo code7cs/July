@@ -7,6 +7,8 @@ import { TestComponentComponent } from "./test-component/test-component.componen
 import { ClassBindingComponent } from "./class-binding/class-binding.component";
 import { EventBindingComponent } from "./event-binding/event-binding.component";
 import { FormsModule } from "@angular/forms";
+import { ComponentInteracctionComponent } from './component-interacction/component-interacction.component';
+import { CustomHerosPipePipe } from './custom-heros-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -14,6 +16,8 @@ import { FormsModule } from "@angular/forms";
     TestComponentComponent,
     ClassBindingComponent,
     EventBindingComponent,
+    ComponentInteracctionComponent,
+    CustomHerosPipePipe,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

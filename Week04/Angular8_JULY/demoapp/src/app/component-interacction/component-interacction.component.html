@@ -1,0 +1,33 @@
+<h2>{{parentData}}</h2>
+<button (click)="fireEvent()">Send Event</button>
+
+<hr>
+<!--pipe-->
+<h2> {{ name }}</h2>
+<h2> {{ name | lowercase}}</h2>
+<h2> {{ name | uppercase}}</h2>
+<h2> {{ message | titlecase }}</h2>
+<h2> {{ name |slice:2:4}}</h2>
+<h2>{{ person | json}}</h2>
+
+<h2>{{5.678 | number:'1.2-3'}}</h2>
+<h2>{{5.678 | number:'3.4-5'}}</h2>
+<h2>{{5.678 | number:'3.1-2'}}</h2>
+
+<!--example of '1.2-2' means:-->
+<!--A minimum of 1 digit will be shown before decimal point-->
+<!--It will show at least 2 digits after decimal point-->
+<!--But not more than 2 digits-->
+
+<h2> {{ 5.678 | percent }}</h2>
+<h2> {{ 5.678 | currency }}</h2>
+<h2> {{ 5.678 | currency:'GBP' }}</h2>
+
+<h2> {{ date | date: 'short' }}</h2>
+
+<!-- custom pipe -->
+<select>
+  <option *ngFor="let hero of superHeros" [value]="hero.Id">
+    {{ hero.Name}}
+  </option>
+</select>
