@@ -9,7 +9,7 @@ export class EventBindingComponent implements OnInit {
   constructor() {}
   public greeting = "";
   ngOnInit(): void {}
-
+  public name = "";
   onClick() {
     console.log("button clicked");
     this.greeting = "Hello";
@@ -17,4 +17,7 @@ export class EventBindingComponent implements OnInit {
   logMessage(value) {
     console.log(value);
   }
+
+  displayName = true;
+  color = "blue";
 }
