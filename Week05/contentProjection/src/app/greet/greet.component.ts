@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-greet',
@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GreetComponent implements OnInit {
 
+  @Input() parentData: string;
+  message: String = "Hello from child";
   constructor() { }
 
   ngOnInit(): void {
