@@ -10,3 +10,24 @@
   </app-greet>
 </div>
 
+
+<div *ngIf="display">
+  ngIf example
+</div>
+
+<ng-template [ngIf]="display">
+  <div>
+    ng-template example FIRST
+  </div>
+  <div>
+    ng-template example SECOND
+  </div>
+</ng-template>
+<ng-container *ngIf="display">
+  <div>
+    ng-container example FIRST
+  </div>
+  <div>
+    ng-container example SECOND
+  </div>
+</ng-container>

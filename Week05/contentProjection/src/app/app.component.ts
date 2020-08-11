@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  display:boolean = true;
   title = 'contentProjectiozn';
 
   public dept: string =  "HR and sales dept"
