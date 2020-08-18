@@ -6,6 +6,8 @@ import EventBind from "./components/EventBind";
 import styles from "./appStyles.module.css";
 import "./appStyles.css";
 
+import Form from "./components/Form";
+
 class App extends Component {
   render() {
     return (
@@ -21,6 +23,7 @@ class App extends Component {
         </Hello>
         <Hello name="Clark" heroName="SuperMan" /> */}
         {/* <EventBind></EventBind> */}
+        <Form></Form>
       </div>
     );
   }
