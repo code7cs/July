@@ -17,11 +17,11 @@ class App extends Component {
   vote(i) {
     let newLanguages = [...this.state.languages];
     newLanguages[i].votes++;
-    function swap(array, i, j) {
-      var temp = array[i];
-      array[i] = array[j];
-      array[j] = temp;
-    }
+    // function swap(array, i, j) {
+    //   var temp = array[i];
+    //   array[i] = array[j];
+    //   array[j] = temp;
+    // }
     this.setState({ languages: newLanguages });
   }
 
