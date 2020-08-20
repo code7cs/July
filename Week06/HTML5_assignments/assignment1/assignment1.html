@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xena Events</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="assignment1.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <div><img src="logo.jpeg" alt="" width="70px" height="70px"></div>
+        <div>
+            <h3>Xena Events</h3>
+        </div>
+    </div>
+    <div class="container">
+        <form action="" name="myForm">
+            <div class="form-group">
+                <h3>Registration</h3>
+            </div>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter name" required
+                    pattern="([a-zA-Z]+)">
+            </div>
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" class="form-control" id="age" placeholder="Select age" required min="18">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    placeholder="Enter email" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Select City</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect01">Options</label>
+                    </div>
+                    <select class="custom-select" id="inputGroupSelect01" required>
+                        <option selected>Choose...</option>
+                        <option value="1">Rajkot</option>
+                        <option value="2">Vizag</option>
+                        <option value="3">Bangalore</option>
+                    </select>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+
+    <script>
+
+    </script>
+</body>
+
+</html>
