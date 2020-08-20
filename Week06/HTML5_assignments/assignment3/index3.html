@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <script>
+        window.onload = function () {
+
+            var chart = new CanvasJS.Chart("chartContainer", {
+                animationEnabled: true,
+                theme: "light2",
+                title: {
+                    text: "the yield of Bajra from 2001 to 2007"
+                },
+                data: [{
+                    type: "line",
+                    indexLabelFontSize: 16,
+                    dataPoints: [{
+                            x: 2001,
+                            y: 281
+                        },
+                        {
+                            x: 2002,
+                            y: 277
+                        },
+                        {
+                            x: 2003,
+                            y: 275
+                        },
+                        {
+                            x: 2004,
+                            y: 457,
+                            indexLabel: "\u2191 highest",
+                            markerColor: "red",
+                            markerType: "triangle"
+                        },
+                        {
+                            x: 2005,
+                            y: 200
+                        },
+                        {
+                            x: 2006,
+                            y: 280
+                        },
+                        {
+                            x: 2007,
+                            y: 150,
+                            indexLabel: "\u2193 lowest",
+                            markerColor: "DarkSlateGrey",
+                            markerType: "cross"
+                        },
+
+
+                    ]
+                }]
+            });
+            chart.render();
+
+        }
+    </script>
+</head>
+
+<body>
+    <div id="chartContainer" style="height: 300px; width: 50%;"></div>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+
+</html>
