@@ -23,7 +23,6 @@ class Form extends Component {
           };
         });
       });
-    console.log(this.state.id);
   };
   handleChange = (e) => {
     this.setState({
