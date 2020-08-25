@@ -10,13 +10,16 @@ export default class NoteList extends Component {
       notes: NotesStore.getAll(),
     };
   }
+
   getTodos = () => {
     console.log("onChange@NoteList");
     this.setState({ notes: NotesStore.getAll() });
   };
+
   componentDidMount() {
     NotesStore.on("change", this.getTodos);
   }
+
   render() {
     const { notes } = this.state;
     const NoteComponents = notes.map((n) => {
