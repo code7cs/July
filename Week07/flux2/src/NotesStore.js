@@ -21,8 +21,13 @@ class NotesStore extends EventEmitter {
   getAll() {
     return this.notes;
   }
+
+  _handleActions = (action) => {
+    console.log(action);
+  };
 }
 
 const notesStore = new NotesStore();
+dispatcher.register(notesStore._handleActions);
 window.notesStore = notesStore;
 export default notesStore;
