@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html ng-app="mgcrea.ngStrapDocs">
+
+<head>
+    <meta charset="utf-8" />
+    <title>AngularJS Plunker</title>
+    <script>
+        document.write('<base href="' + document.location + '" />');
+    </script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/fontawesome/4.5.0/css/font-awesome.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//mgcrea.github.io/angular-strap/styles/libs.min.css">
+    <link rel="stylesheet" href="//mgcrea.github.io/angular-strap/styles/docs.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <script src="//cdn.jsdelivr.net/angularjs/1.5.5/angular.min.js" data-semver="1.5.5"></script>
+    <script src="//cdn.jsdelivr.net/angularjs/1.5.5/angular-animate.min.js" data-semver="1.5.5"></script>
+    <script src="//cdn.jsdelivr.net/angularjs/1.5.5/angular-sanitize.min.js" data-semver="1.5.5"></script>
+    <script src="//mgcrea.github.io/angular-strap/dist/angular-strap.js" data-semver="v2.3.8"></script>
+    <script src="//mgcrea.github.io/angular-strap/dist/angular-strap.tpl.js" data-semver="v2.3.8"></script>
+    <script src="//mgcrea.github.io/angular-strap/docs/angular-strap.docs.tpl.js" data-semver="v2.3.8"></script>
+    <script src="app.js"></script>
+</head>
+
+<body ng-controller="MainCtrl">
+
+    <div class="bs-docs-section" ng-controller="DatepickerDemoCtrl">
+
+
+
+
+        <div class="bs-example" style="padding-bottom: 24px;" append-source>
+            <form name="datepickerForm" class="form-inline" role="form">
+                <!-- Basic example -->
+                <div class="form-group" ng-class="{'has-error': datepickerForm.date.$invalid}">
+                    <label class="control-label"><i class="fa fa-calendar"></i> Date <small>(as date)</small></label>
+                    <input type="text" class="form-control" ng-model="selectedDate" name="date" bs-datepicker>
+                </div>
+                <!-- Custom example -->
+                <div class="form-group" ng-class="{'has-error': datepickerForm.date2.$invalid}">
+                    <label class="control-label"><i class="fa fa-calendar"></i> Date <small>(as number)</small></label>
+                    <input type="text" class="form-control" ng-model="selectedDateAsNumber"
+                        data-date-format="yyyy-MM-dd" data-date-type="number" data-min-date="02/10/86"
+                        data-max-date="today" data-autoclose="1" name="date2" bs-datepicker>
+                </div>
+                <hr>
+                <!-- Date range example -->
+                <div class="form-group">
+                    <label class="control-label"><i class="fa fa-calendar"></i> <i class="fa fa-arrows-h"></i> <i
+                            class="fa fa-calendar"></i> Date range <small>(dynamic)</small></label><br>
+                    <div class="form-group col-xs-6">
+                        <input type="text" class="form-control" ng-model="fromDate" data-max-date="{{untilDate}}"
+                            placeholder="From" bs-datepicker>
+                    </div>
+                    <div class="form-group col-xs-6">
+                        <input type="text" class="form-control" ng-model="untilDate" data-min-date="{{fromDate}}"
+                            placeholder="Until" bs-datepicker>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+</body>
+
+</html>
