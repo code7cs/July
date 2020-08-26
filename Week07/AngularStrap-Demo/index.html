@@ -1,17 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="mgcrea.ngStrp">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/fontawesome/4.5.0/css/font-awesome.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//mgcrea.github.io/angular-strap/styles/libs.min.css">
+    <link rel="stylesheet" href="//mgcrea.github.io/angular-strap/styles/docs.min.css">
+
+
+    <script src="//cdn.jsdelivr.net/angularjs/1.5.5/angular.min.js" data-semver="1.5.5"></script>
+    <script src="//cdn.jsdelivr.net/angularjs/1.5.5/angular-animate.min.js" data-semver="1.5.5"></script>
+    <script src="//cdn.jsdelivr.net/angularjs/1.5.5/angular-sanitize.min.js" data-semver="1.5.5"></script>
+
     <script type="text/javascript" src="js/angular-strap.min.js"></script>
     <script type="text/javascript" src="js/angular-strap.tpl.min.js"></script>
     <script src="controller.js"></script>
     <title>Document</title>
 </head>
 
-<body>
+<body ng-controller="MainCtrl">
+    <div class="container">
+        <button class="btn btn-primary" bs-modal="modal">Show Modal</button>
+        <button class="btn btn-primary" data-animation="am-fade-and-scale" bs-modal="modal">Show Modal</button>
+        <button class="btn btn-primary" data-animation="am-fade-and-slide-top" bs-modal="modal">Show Modal</button>
+        <br>
+        <br>
+        <button class="btn btn-link" bs-tooltip="tooltip">What's this</button>
+        <button class="btn btn-link" bs-tooltip="tooltip" data-trigger="click">What's this</button>
+        <input type="text" bs-tooltip="tooltip" data-trigger="focus" data-placement="right">
+        <br>
+        <br>
+        <button class="btn btn-primary" bs-popover="popover">Show Popover</button>
+        <br>
+        <br>
+        <button class="btn btn-primary" bs-alert="alert">Show Alert</button>
+        <br>
+        <div id="alertContainer">DIV CONTAINER</div>
+        <button class="btn btn-primary" bs-alert="alert" data-container="#alertContainer">Show Alert</button>
+        <br>
+        <br>
+        <button class="btn btn-primary" ng-click="showAlert()">Alert using Services</button>
 
+    </div>
 </body>
 
 </html>
