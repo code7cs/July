@@ -7,6 +7,7 @@ import { AuthenticationService } from "../authentication.service";
   styleUrls: ["./employee.component.css"],
 })
 export class EmployeeComponent implements OnInit {
+  salSlip: string;
   constructor(private authService: AuthenticationService) {
     this.authService.authenticate();
   }
@@ -15,8 +16,8 @@ export class EmployeeComponent implements OnInit {
 
   getSalarySlip() {
     if (this.authService.checkAuthentication()) {
-      return "Salary Slip";
+      this.salSlip = "Salary Slip";
     }
-    return "Not Available";
+    this.salSlip = "Not Available";
   }
 }
