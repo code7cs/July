@@ -1,4 +1,43 @@
 body {
-  background: orangered; }
+  background: #d2e1dd;
+  color: #333333;
+  font-family: "Andelo Mono", monospace;
+  font-size: 14px; }
+
+article {
+  background: white;
+  width: 760px;
+  margin: -60px auto 0;
+  padding: 40px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: -2; }
+
+header {
+  border-radius: 100%;
+  height: 200px;
+  width: 200px;
+  line-height: 200px;
+  text-align: center;
+  background: #003366;
+  color: white;
+  margin: 0 auto; }
+
+h1 {
+  font-size: 16px; }
+
+footer {
+  border-radius: 100%;
+  height: 150px;
+  width: 150px;
+  line-height: 150px;
+  text-align: center;
+  background: #333333;
+  color: #d2e1dd;
+  margin: 0 auto;
+  font-size: 11px;
+  position: relative;
+  z-index: -4;
+  margin-top: -60px; }
 
 /*# sourceMappingURL=styles.css.map */
