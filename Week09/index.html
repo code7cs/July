@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="input1" type="text">
+    <input id="input2" type="text">
+    <button onClick="copy()">click</button>
+    <script>
+        function copy() {
+            let text = document.getElementById("input1").value;
+            document.getElementById("input2").value = text;
+        }
+    </script>
+</body>
+
+</html>
