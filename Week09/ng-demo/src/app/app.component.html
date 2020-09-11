@@ -1,2 +1,5 @@
 <!-- <app-keyup></app-keyup> -->
-<app-view-child-comp></app-view-child-comp>
+<h1>List of Messages</h1>
+<app-view-child-comp *ngFor="let message of messages" [message]="message">
+  <p>Test ng-content </p>
+</app-view-child-comp>
