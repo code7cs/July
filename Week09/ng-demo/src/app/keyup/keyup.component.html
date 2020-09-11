@@ -1,0 +1,22 @@
+<!-- <input (keyup)="onKey($event)"> -->
+<!-- <input type="text" #box (keyup)="0"> -->
+<!-- <p>{{values}}</p> -->
+<!-- <p>{{box.value}}</p> -->
+<!-- <input #box (keyup.enter)="onEnter(box.value)">
+<p>{{value}}</p> -->
+<!-- <input #newHero (keyup.enter)="addHero(newHero.value); newHero.value=''"
+  (blur)="addHero(newHero.value); newHero.value='' ">
+
+<button (click)="addHero(newHero.value)">Add</button>
+
+<ul>
+  <li *ngFor="let hero of heroes">{{hero}}</li>
+</ul> -->
+<!-- <h2>Power Booster</h2>
+<p>Super power boost: {{2 | exponentialStrength: 10}}</p> -->
+<h2>Power Boost Calculator</h2>
+<div>Normal power: <input [(ngModel)]="power"></div>
+<div>Boost factor: <input [(ngModel)]="factor"></div>
+<p>
+  Super Hero Power: {{power | exponentialStrength: factor}}
+</p>

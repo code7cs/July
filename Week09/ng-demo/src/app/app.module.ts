@@ -3,16 +3,20 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { KeyupComponent } from './keyup/keyup.component';
+import { ExponentialStrengthPipe } from './exponential-strength.pipe';
+import { FormsModule } from '@angular/forms';
+import { ViewChildCompComponent } from './view-child-comp/view-child-comp.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    KeyupComponent,
+    ExponentialStrengthPipe,
+    ViewChildCompComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
