@@ -7,6 +7,7 @@ import { KeyupComponent } from './keyup/keyup.component';
 import { ExponentialStrengthPipe } from './exponential-strength.pipe';
 import { FormsModule } from '@angular/forms';
 import { ViewChildCompComponent } from './view-child-comp/view-child-comp.component';
+import { CounterComponent } from './counter/counter.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { ViewChildCompComponent } from './view-child-comp/view-child-comp.compon
     KeyupComponent,
     ExponentialStrengthPipe,
     ViewChildCompComponent,
+    CounterComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

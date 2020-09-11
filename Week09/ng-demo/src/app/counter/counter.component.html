@@ -1,0 +1,4 @@
+<input #num [(ngModel)]="count" />
+{{count}}
+<button (click)="increase(num.value)">Increase</button>
+<button (click)="decrease(num.value)">Descrease</button>
