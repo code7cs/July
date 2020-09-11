@@ -3,3 +3,18 @@
 <app-view-child-comp *ngFor="let message of messages" [message]="message">
   <p>Test ng-content </p>
 </app-view-child-comp>
+
+<table>
+  <td>First Name</td>
+  <td>Last Name</td>
+  <td>Age</td>
+  <ng-container *ngFor="let person of persons">
+    <ng-container *ngIf="person.age > 20">
+      <tr>
+        <td>{{ person.firstName }}</td>
+        <td>{{ person.lastName }}</td>
+        <td>{{ person.age }}</td>
+      </tr>
+    </ng-container>
+  </ng-container>
+</table>

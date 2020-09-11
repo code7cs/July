@@ -1,4 +1,4 @@
-import { Component, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, ViewChild, AfterViewInit, OnInit } from '@angular/core';
 import { ViewChildCompComponent } from './view-child-comp/view-child-comp.component';
 
 @Component({
@@ -6,12 +6,22 @@ import { ViewChildCompComponent } from './view-child-comp/view-child-comp.compon
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent implements OnInit, AfterViewInit {
   @ViewChild(ViewChildCompComponent)
   firstMessageComponent: ViewChildCompComponent;
 
   messages: string[] = ['Message 1', 'Message 2', 'Message 3', 'Message 4'];
   // title = 'ng-demo';
+
+  persons: Array<any>;
+  ngOnInit() {
+    this.persons = [
+      { firstName: 'John', lastName: 'Doe', age: 20 },
+      { firstName: 'Steve', lastName: 'Rogers', age: 12 },
+      { firstName: 'Tony', lastName: 'Stark', age: 30 },
+      { firstName: 'Bruce', lastName: 'Banner', age: 25 },
+    ];
+  }
 
   ngAfterViewInit() {
     this.firstMessageComponent.message =
