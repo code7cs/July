@@ -2,7 +2,15 @@
 <h1>List of Messages</h1>
 <app-view-child-comp *ngFor="let message of messages" [message]="message">
   <p>Test ng-content </p>
+  <p #projectedContent>hello projected content</p>
 </app-view-child-comp>
+
+
+<hr>
+
+<div #testViewChild>This is a test viewchild</div>
+
+<hr>
 
 <table>
   <td>First Name</td>

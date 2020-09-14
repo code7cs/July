@@ -1,4 +1,10 @@
-import { Component, ViewChild, AfterViewInit, OnInit } from '@angular/core';
+import {
+  Component,
+  ViewChild,
+  AfterViewInit,
+  OnInit,
+  ElementRef,
+} from '@angular/core';
 import { ViewChildCompComponent } from './view-child-comp/view-child-comp.component';
 
 @Component({
@@ -9,6 +15,8 @@ import { ViewChildCompComponent } from './view-child-comp/view-child-comp.compon
 export class AppComponent implements OnInit, AfterViewInit {
   @ViewChild(ViewChildCompComponent)
   firstMessageComponent: ViewChildCompComponent;
+
+  @ViewChild('testViewChild', { static: false }) divRef: ElementRef;
 
   messages: string[] = ['Message 1', 'Message 2', 'Message 3', 'Message 4'];
   // title = 'ng-demo';
@@ -26,5 +34,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     this.firstMessageComponent.message =
       'this message changed from parent component';
+
+    alert(this.divRef.nativeElement.innerHTML);
   }
 }
